@@ -9,5 +9,3 @@ export const Spinner = () => {
     </Container>
   )
 }
-
-export default Spinner
