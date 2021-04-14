@@ -20,7 +20,7 @@ export const App = () => {
           : <>
             <ListOfCategories />
             <ListOfPhotoCards categoryId={1} />
-          </>
+            </>
       }
     </>
   )
