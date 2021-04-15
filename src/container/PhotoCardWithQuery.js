@@ -23,7 +23,6 @@ const renderProp = ({ loading, error, data = {} }) => {
   if (error) return <p>Error!</p>
 
   const { photo = {} } = data
-  console.log(data)
   return <PhotoCard {...photo} />
 }
 
