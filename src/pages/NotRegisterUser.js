@@ -3,6 +3,7 @@ import Context from '../Context'
 
 import { UserForm } from '../components/UserForm'
 import { RegisterMutation } from '../container/RegisterMutation'
+import { LoginMutation } from '../container/LoginMutation'
 
 export const NotRegisterUser = () => {
   return (
@@ -24,7 +25,19 @@ export const NotRegisterUser = () => {
                   }
                 }
               </RegisterMutation>
-              <UserForm title='Iniciar Sesion' onSubmit={activateAuth} />
+              <LoginMutation>
+                {
+                  (login, { data, loading, error }) => {
+                    const onSubmit = ({ email, password }) => {
+                      const input = { email, password }
+                      const variables = { input }
+                      login({ variables }).then(activateAuth)
+                    }
+                    const errorMsg = error && 'La contraseña no es correcta o el usuario no existe'
+                    return <UserForm disabled={loading} error={errorMsg} title='Iniciar Sesion' onSubmit={onSubmit} />
+                  }
+                }
+              </LoginMutation>
             </>
           )
         }
