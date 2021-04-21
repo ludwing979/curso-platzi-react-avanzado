@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout'
 
 import { FavsWithQuery } from '../container/GetFavorites'
 
-export const Favs = () => {
+export default () => {
   return (
     <Layout title='Tus Favoritos' subtitle='Aqui puedes encontrar tus favoritos'>
       <div>Favs</div>
