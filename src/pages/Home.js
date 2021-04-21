@@ -3,7 +3,7 @@ import React from 'react'
 import { ListOfCategories } from '../components/ListOfCategories'
 import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
 
-export const Home = ({ id }) => {
+const HomePage = ({ id }) => {
   return (
     <>
       <ListOfCategories />
@@ -11,3 +11,7 @@ export const Home = ({ id }) => {
     </>
   )
 }
+
+export const Home = React.memo(HomePage, (prevProps, props) => {
+  return prevProps.id === props.id
+})
