@@ -9,7 +9,7 @@
     "build": "webpack --mode development",
     "start:dev": "npx serve dist -s",
     "serve:dev": "npm run build && npm run start:dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
+    "cypress": "^7.1.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "standard": "^16.0.3",
