@@ -54,8 +54,5 @@ PhotoCard.propTypes = {
     if (propValue === undefined) {
       return new Error(`${propName} value must be defined`)
     }
-    if (propValue > 0) {
-      return new Error(`${propName} value must greater than 0`)
-    }
   }
 }

@@ -9,6 +9,7 @@ import { User } from './pages/User'
 import { Logo } from './components/Logo'
 import { NotFound } from './pages/NotFound'
 import { NavBar } from './components/NavBar'
+import { RegisterUser } from './pages/RegisterUser'
 import { NotRegisterUser } from './pages/NotRegisterUser'
 
 import { GlobalStyles } from './styles/GlobalStyles'
@@ -27,9 +28,11 @@ export const App = () => {
         <Home path='/pet/:id' />
         <Detail path='/detail/:detailId' />
         {!isAuth && <NotRegisterUser path='/login' />}
+        {!isAuth && <RegisterUser path='/signup' />}
         {!isAuth && <Redirect noThrow from='/favs' to='/login' />}
         {!isAuth && <Redirect noThrow from='/user' to='/login' />}
         {isAuth && <Redirect noThrow from='/login' to='/' />}
+        {isAuth && <Redirect noThrow from='/signup' to='/' />}
         <Favs path='/favs' />
         <User path='/user' />
       </Router>

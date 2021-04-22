@@ -1,7 +1,7 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "1.0.0",
-  "description": "**¡Sígueme en Youtube para más contenido de React y Javascript!** 👉 https://www.youtube.com/midudev",
+  "version": "1.1.0",
+  "description": "Instragam of pets",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
