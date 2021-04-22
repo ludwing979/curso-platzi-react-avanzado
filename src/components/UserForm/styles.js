@@ -11,6 +11,11 @@ export const Form = styled.form`
 
 export const Div = styled.div`
   width: 80vw;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.5);
 `
 
 export const Input = styled.input`

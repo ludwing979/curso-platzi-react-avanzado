@@ -21,7 +21,7 @@ export const App = () => {
   return (
     <Suspense fallback={<div />}>
       <GlobalStyles />
-      <Logo />
+      <center><Logo /></center>
       <Router>
         <NotFound default />
         <Home path='/' />
