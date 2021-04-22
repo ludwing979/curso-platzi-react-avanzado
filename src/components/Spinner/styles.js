@@ -1,41 +1,60 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-const movementframe = keyframes`
-    0% {
-    transform: rotate(0deg);
+const ldsEllipsis1 = keyframes`
+  0% {
+    transform: scale(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1);
   }
 `
 
-const ringMove = ({ time = '1.2s', type = 'infinite' } = {}) =>
-  css`animation: ${time} ${movementframe} cubic-bezier(0.5, 0, 0.5, 1) ${type};`
+const ldsEllipsis2 = keyframes`
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+`
 
-export const LdsRing = styled.div`
+const ldsEllipsis3 = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+`
+
+export const LdsEllipsis = styled.div`
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
   div {
-    box-sizing: border-box;
-    display: block;
     position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #253a46;
+    top: 33px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
-    ${ringMove()}
-    border-color: #253a46 transparent transparent transparent;
+    background: #253a46;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
     &:nth-child(1) {
-      animation-delay: -0.45s;
+      left: 8px;
+      animation: 0.6s ${ldsEllipsis1} infinite;
     }
     &:nth-child(2) {
-      animation-delay: -0.3s;
+      left: 8px;
+      animation: 0.6s ${ldsEllipsis2} infinite;
     }
     &:nth-child(3) {
-      animation-delay: -0.15s;
+      left: 8px;
+      animation: 0.6s ${ldsEllipsis2} infinite;
+    }
+    &:nth-child(4) {
+      left: 8px;
+      animation: 0.6s ${ldsEllipsis3} infinite;
     }
   }
 `

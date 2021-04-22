@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { LdsRing, Container } from './styles'
+import { LdsEllipsis, Container } from './styles'
 
 export const Spinner = () => {
   return (
     <Container>
-      <LdsRing><div /><div /><div /><div /></LdsRing>
+      <LdsEllipsis><div /><div /><div /><div /></LdsEllipsis>
     </Container>
   )
 }
