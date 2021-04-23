@@ -4,10 +4,9 @@ import { Context } from './Context'
 
 import { Home } from './pages/Home'
 import { Detail } from './pages/Detail'
-// import { Favs } from './pages/Favs'
 import { User } from './pages/User'
-import { Logo } from './components/Logo'
 import { NotFound } from './pages/NotFound'
+import { Topbar } from './components/Topbar'
 import { NavBar } from './components/NavBar'
 import { RegisterUser } from './pages/RegisterUser'
 import { NotRegisterUser } from './pages/NotRegisterUser'
@@ -18,10 +17,11 @@ const Favs = React.lazy(() => import('./pages/Favs'))
 
 export const App = () => {
   const { isAuth } = useContext(Context)
+
   return (
     <Suspense fallback={<div />}>
       <GlobalStyles />
-      <center><Logo /></center>
+      <Topbar id='top' />
       <Router>
         <NotFound default />
         <Home path='/' />

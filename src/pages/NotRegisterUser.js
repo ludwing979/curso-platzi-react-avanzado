@@ -2,12 +2,14 @@ import React, { useContext } from 'react'
 import { Context } from '../Context'
 
 import { UserForm } from '../components/UserForm'
+import { ReturnButton } from '../components/ReturnButton'
 import { LoginMutation } from '../container/LoginMutation'
 
 export const NotRegisterUser = () => {
   const { activateAuth } = useContext(Context)
   return (
     <>
+      <ReturnButton />
       <LoginMutation>
         {
           (login, { data, loading, error }) => {
